@@ -1,4 +1,5 @@
 // RegexStudy.cpp : Defines the entry point for the console application.
+// RegexStudy.cpp by James R. Vaughan
 //
 
 #include "stdafx.h"
