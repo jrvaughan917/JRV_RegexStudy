@@ -25,6 +25,7 @@ int main()
 	regex mmdd("[0-9]{1,2}(\/|-|.)[0-9]{1,2}"); // MM/DD & MM-DD & MM.DD
 	regex ddmm("[0-9]{1,2}(\/|-|.)[0-9]{1,2}"); // DD/MM & DD-MM & DD.MM
 	regex mmyy("[0-9]{1,2}(\/|-|.)[0-9]{2}"); // MM/YY & MM-YY & MM.YY
+	regex yyyy("[0-9]{4}"); // MM/YY & MM-YY & MM.YY
 
 	string testString = "01/01/1990";
 	smatch match;
@@ -96,6 +97,11 @@ int main()
 		if (regex_match(input, mmyy))
 		{
 			cout << "Date(MMYY) "; noMatch = false;
+		}
+
+		if (regex_match(input, yyyy))
+		{
+			cout << "Date(YYYY) "; noMatch = false;
 		}
 
 		if (noMatch)
